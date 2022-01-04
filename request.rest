@@ -1,0 +1,211 @@
+GET http://localhost:3001/api/patients
+
+
+
+###
+GET http://localhost:3001/api/patients/61d0584a2ad96653f02fd379
+
+###
+GET http://localhost:3001/api/patients/61d0584a2ad96653f02fd379/entries
+
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+       "name": "John McClane",
+        "dateOfBirth": "1986-07-09",
+        "ssn": "090786-122X",
+        "gender": "male",
+        "occupation": "New york city cop"
+    
+}
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+        "name": "Martin Riggs",
+        "dateOfBirth": "1979-01-30",
+        "ssn": "300179-77A",
+        "gender": "male",
+        "occupation": "Cop"
+    
+}
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+        "name": "Hans Gruber",
+        "dateOfBirth": "1970-04-25",
+        "ssn": "250470-555L",
+        "gender": "male",
+        "occupation": "Technician"
+    
+}
+
+
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+        
+        "name": "Dana Scully",
+        "dateOfBirth": "1974-01-05",
+        "ssn": "050174-432N",
+        "gender": "female",
+        "occupation": "Forensic Pathologist"
+    
+}
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+        
+        "name": "Matti Luukkainen",
+        "dateOfBirth": "1971-04-09",
+        "ssn": "090471-8890",
+        "gender": "male",
+        "occupation": "Digital evangelist"
+    
+}
+
+
+###
+GET http://localhost:3001/api/diagnoses
+
+
+###
+POST http://localhost:3001/api/diagnoses
+Content-Type: application/json
+
+{
+  "code": "S62.5",
+    "name": "Fracture of thumb",
+    "latin": "Fractura [ossis/ossium] pollicis"
+}
+
+###
+POST http://localhost:3001/api/diagnoses
+Content-Type: application/json
+
+{
+   "code": "Z74.3",
+    "name": "Need for continuous supervision"
+}
+
+###
+POST http://localhost:3001/api/diagnoses
+Content-Type: application/json
+
+{
+   "code": "Z57.1",
+    "name": "Occupational exposure to radiation"
+}
+
+###
+POST http://localhost:3001/api/diagnoses
+Content-Type: application/json
+
+{
+   "code": "M51.2",
+    "name": "Other specified intervertebral disc displacement",
+    "latin": "Alia dislocatio disci intervertebralis specificata"
+}
+
+
+
+###
+POST http://localhost:3001/api/patients/61d30e4ad270cf8500b2256e/entries
+Content-Type: application/json
+
+{
+    "date": "2015-01-02",
+    "specialist": "MD House",
+    "type": "Hospital",
+    "description": "Healing time appr. 2 weeks. patient doesn't remember how he got the injury.",
+    "diagnosisCodes": ["S62.5"],
+    "discharge": {
+              "date": "2015-01-16",
+              "criteria": "Thumb has healed."
+            }
+}
+
+
+###
+POST http://localhost:3001/api/patients/61d4466ecb8edf8179fcda7a/entries
+Content-Type: application/json
+
+{
+    "date": "2019-08-05",
+    "specialist": "MD House",
+    "type": "OccupationalHealthcare",
+    "employerName": "HyPD",
+    "description": "Patient mistakenly found himself in a nuclear plant waste site without protection gear. Very minor radiation poisoning.",
+    "diagnosisCodes": ["Z57.1", "Z74.3", "M51.2"],
+    "sickLeave": {
+        "startDate": "2019-08-05",
+        "endDate": "2019-08-28"
+    }
+}
+
+
+###
+POST http://localhost:3001/api/patients/61d44736cb8edf8179fcda8d/entries
+Content-Type: application/json
+
+{
+    "date": "2019-10-20",
+    "specialist": "MD House",
+    "type": "HealthCheck",
+    "description": "Yearly control visit. Cholesterol levels back to normal.",
+    "healthCheckRating": 0
+}
+
+###
+POST http://localhost:3001/api/patients/61d44736cb8edf8179fcda8d/entries
+Content-Type: application/json
+
+{
+        "date":"2018-10-05",
+        "specialist": "MD House",
+        "type": "HealthCheck",
+        "description":
+          "Yearly control visit. Due to high cholesterol levels recommended to eat more vegetables.",
+        "healthCheckRating": 1
+}
+
+
+###
+POST http://localhost:3001/api/patients/61d30cfb248b18f3b20b816a/entries
+Content-Type: application/json
+
+{
+    "date": "2019-05-01",
+        "specialist": "Dr Byte House",
+        "type": "HealthCheck",
+        "description": "Digital overdose, very bytestatic. Otherwise healthy.",
+        "healthCheckRating": 0
+}
+
+
+
+###
+POST http://localhost:3001/api/patients/61d44736cb8edf8179fcda8d/entries
+Content-Type: application/json
+
+{
+        "date": "2019-09-10",
+        "specialist": "MD House",
+        "type": "OccupationalHealthcare",
+        "employerName": "FBI",
+        "description": "Prescriptions renewed."
+}
