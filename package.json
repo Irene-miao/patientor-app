@@ -1,6 +1,5 @@
 {
   "name": "patientor-backend",
-  "homepage": "https://Irene-miao.github.io/patient-entry-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +7,7 @@
     "tsc": "tsc",
     "dev": "ts-node-dev src/index.ts",
     "lint": "eslint --ext .ts .",
-    "start": "node build/index.js",
+    "start": "node ts-build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "logs:prod": "heroku logs --tail"
   },
@@ -17,6 +16,7 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/mongoose-unique-validator": "^1.0.5",
+    "@types/node": "^17.0.8",
     "@types/uuid": "^8.3.3",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
