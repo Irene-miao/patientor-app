@@ -1,9 +1,10 @@
 GET http://localhost:3001/api/patients
 
-
+###
+DELETE http://localhost:3001/api/patients/6210f79302f701d55757dc7d
 
 ###
-GET http://localhost:3001/api/patients/61d0584a2ad96653f02fd379
+GET http://localhost:3001/api/patients/6210f79302f701d55757dc7d
 
 ###
 GET http://localhost:3001/api/patients/61d0584a2ad96653f02fd379/entries
@@ -124,18 +125,18 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost:3001/api/patients/61d30e4ad270cf8500b2256e/entries
+POST http://localhost:3001/api/patients/6210f79302f701d55757dc7d/entries
 Content-Type: application/json
 
 {
-    "date": "2015-01-02",
+    "date": "2022-01-02",
     "specialist": "MD House",
     "type": "Hospital",
-    "description": "Healing time appr. 2 weeks. patient doesn't remember how he got the injury.",
-    "diagnosisCodes": ["S62.5"],
+    "description": "Covid19 infection",
+    "diagnosisCodes": ["Z74.3"],
     "discharge": {
-              "date": "2015-01-16",
-              "criteria": "Thumb has healed."
+              "date": "2022-01-16",
+              "criteria": "Recovered from Covid19"
             }
 }
 

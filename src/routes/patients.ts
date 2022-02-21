@@ -50,6 +50,22 @@ patientRouter.post('/', async (req, res) => {
 }
 });
 
+// Delete patient
+patientRouter.delete('/:id', async (req, res) => {
+    
+    try {
+        const removedPatient = await Patients.findByIdAndDelete(req.params.id).exec();
+        console.log(removedPatient);
+        res.status(204).end();
+    } catch (error: unknown) {
+        let errorMessage = ''
+        if (error instanceof Error) {
+            errorMessage += ' Error: ' + error.message;
+        }
+        res.status(400).send(errorMessage);
+    } 
+});
+
 
 // Edit patient
 patientRouter.post('/:id/entries', async (req, res) => {
