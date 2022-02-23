@@ -1,10 +1,10 @@
 GET http://localhost:3001/api/patients
 
 ###
-DELETE http://localhost:3001/api/patients/6210f79302f701d55757dc7d
+DELETE http://localhost:3001/api/patients/621631c4e9c270eb92a7d133
 
 ###
-GET http://localhost:3001/api/patients/6210f79302f701d55757dc7d
+GET http://localhost:3001/api/patients/621631c4e9c270eb92a7d133
 
 ###
 GET http://localhost:3001/api/patients/61d0584a2ad96653f02fd379/entries
@@ -15,11 +15,11 @@ POST http://localhost:3001/api/patients
 Content-Type: application/json
 
 {
-       "name": "John McClane",
-        "dateOfBirth": "1986-07-09",
-        "ssn": "090786-122X",
+       "name": "Bobby",
+        "dateOfBirth": "2001-01-02",
+        "ssn": "090786-001B",
         "gender": "male",
-        "occupation": "New york city cop"
+        "occupation": "builder"
     
 }
 

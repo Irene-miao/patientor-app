@@ -52,6 +52,21 @@ patientRouter.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function
         res.status(400).send(errorMessage);
     }
 }));
+// Delete patient
+patientRouter.delete('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const removedPatient = yield patients_1.default.findByIdAndDelete(req.params.id).exec();
+        console.log(removedPatient);
+        res.status(204).end();
+    }
+    catch (error) {
+        let errorMessage = '';
+        if (error instanceof Error) {
+            errorMessage += ' Error: ' + error.message;
+        }
+        res.status(400).send(errorMessage);
+    }
+}));
 // Edit patient
 patientRouter.post('/:id/entries', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
